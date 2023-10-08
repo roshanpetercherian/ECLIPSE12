@@ -6,16 +6,21 @@ body, h1, h2, p {
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
+    background-image: url(eclipse.jpg);
+    background-size: cover; /* This ensures the image covers the entire viewport */
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
     color: #fff;
+    
 }
 
 /* Header styles */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #333;
+    color: #fff
 }
 
 header h1 {
@@ -24,24 +29,40 @@ header h1 {
 
 /* Navigation menu styles */
 nav {
-    background-color: #333;
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 10px 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin-right: 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
+    font-weight: bold;
+    font-family: 'Helvetica',sans-serif;
+}
+
+/* Main Content Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Helvetica',sans-serif;
 }
 
 nav a:hover {
@@ -55,12 +76,27 @@ section {
 
 h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
     opacity: 0;
+    color: #333;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #b6b2b2;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
 
 section:nth-child(odd) h2 {
     transform: translateX(-20px);
@@ -76,12 +112,13 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: #333;
+    color: #fff;
 }
-#simulator {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    background-color: #000;
+#eclipsesimulator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #earth, #moon, #sun {
@@ -93,15 +130,26 @@ footer {
 
 #earth {
     background-color: #00f;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
 }
 
 #moon {
     background-color: #aaa;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
 }
 
 #sun {
     background-color: #ff0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
 }
-
 
 
